@@ -103,13 +103,18 @@ margin:10px;
 box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
 
-img{width:100%;border-radius:12px;}
+img{
+width:100%;
+border-radius:12px;
+}
 
+/* CARRUSEL GENERAL */
 .carousel{
 display:flex;
 overflow-x:auto;
 gap:10px;
 scroll-snap-type:x mandatory;
+padding-bottom:8px;
 }
 
 .carousel img{
@@ -117,14 +122,48 @@ min-width:80%;
 height:360px;
 object-fit:cover;
 scroll-snap-align:center;
+background:white;
 }
 
-@media (max-width: 768px){
-  .carousel img{
-    min-width:90%;
-    height:auto;
-    object-fit:contain;
-  }
+/* RESEÑAS */
+.reviews-carousel img{
+min-width:80%;
+height:auto;
+max-height:700px;
+object-fit:contain;
+padding:8px;
+background:white;
+border-radius:16px;
+box-shadow:0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* MOBILE */
+@media (max-width:768px){
+
+.menu-links{
+position:static;
+margin:15px auto;
+width:fit-content;
+text-align:center;
+}
+
+.carousel img{
+min-width:90%;
+height:auto;
+object-fit:contain;
+}
+
+.reviews-carousel img{
+min-width:92%;
+max-height:none;
+height:auto;
+padding:6px;
+}
+
+h1{
+font-size:28px;
+}
+
 }
 
 .float-whatsapp{
@@ -216,11 +255,9 @@ target="_blank">
 <h2>¿Cómo son las clases?</h2>
 <div class="card">
 <p>
-La idea es que el alumno se divierta mientras aprende.<br><br>
+La idea es que el alumno se divierta mientras aprende, por lo que, a lo largo de las clases, aprenderemos canciones que le sean accesibles y que, al mismo tiempo, motiven la práctica.<br><br>
 
-Tengo una estructura armada donde estudiamos el instrumento y los conceptos musicales a través de canciones que sean de su agrado. Al mismo tiempo, si está abierto a ampliar los horizontes, siempre es positivo.<br><br>
-
-Vamos a contar con un manual para tomar como guía y a través de Google Drive, con una carpeta específica para cada alumno, te voy a ir dejando consignas y material para que puedas revisar las veces que sea necesario. Además, vamos a ir filmando videos, ya sea con mi celular o con el tuyo para que te lleves lo que vimos en la clase, ya sea presencial o virtual.
+Vamos a contar con un manual como guía y, a través de Google Drive, te voy a ir pasando consignas y material para que puedas revisar las veces que sea necesario. Además, vamos a ir filmando videos, ya sea con mi celular o con el tuyo, para que puedas ver lo que estudiamos en la clase, ya sea presencial o virtual.
 </p>
 </div>
 </div>
@@ -244,9 +281,11 @@ Vamos a contar con un manual para tomar como guía y a través de Google Drive, 
 <div class="section">
 <h2>Sobre mí</h2>
 <div class="card">
-<p>
-Tengo 32 años y hace más de 10 que doy clases individuales y grupales. Soy músico de jazz específicamente, pero antes que nada soy una persona muy abierta y entiendo que uno se tiene que entretener mientras aprende. Por supuesto que me encantaría que se interesaran por el estilo.
-</p>
+<p>Tengo 32 años y hace más de 10 que doy clases individuales y grupales. Soy músico de jazz, específicamente, y en mi recorrido toqué con músicos de excelencia, de quienes aprendí muchísimo. Algunos destacados del mundo del jazz y otros del tango.</p>
+
+<p>He tocado en vivo innumerables veces, en varios países, experiencias que me forjaron como músico y como persona.</p>
+
+<p>Hoy en día me dedico a dar clases y realmente lo disfruto, ayudando a mis alumnos a relacionarse con el mundo de la música y el arte.</p>
 </div>
 </div>
 
@@ -265,7 +304,7 @@ allowfullscreen></iframe>
 
 <div class="section">
 <h2>Opiniones de alumnos ⭐</h2>
-<div class="carousel">
+<div class="carousel reviews-carousel">
 <img src="resena1.png">
 <img src="resena2.png">
 <img src="resena3.png">
@@ -303,7 +342,7 @@ Clases de 1 hora.<br><br>
 • $30.000 clase suelta<br><br>
 
 <b>🏠 A domicilio (dentro de CABA):</b><br>
-• $220.000 mensual (4 clases)<br>
+• $200.000 mensual (4 clases)<br>
 • $60.000 clase suelta
 </p>
 </div>
